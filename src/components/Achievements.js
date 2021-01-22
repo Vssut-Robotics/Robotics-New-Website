@@ -1,4 +1,4 @@
-import parallax from '../images/parallax/achievements.png'
+import parallax from '../images/parallax/white.webp'
 
 const Achievements = () => {
     return (
@@ -8,13 +8,16 @@ const Achievements = () => {
           backgroundImage: `url(${parallax})`,
         }}
       >
-        <div className="bg-gray-300 bg-opacity-40 dark:bg-gray-900">
-          <div className=" flex flex-row justify-center text-center uppercase text-5xl mb-5 p-6">
+        <div className="bg-white bg-opacity-70 dark:bg-gray-900 dark:bg-opacity-70">
+          <div className=" flex flex-row justify-center text-center uppercase text-3xl sm:text-4xl md:text-5xl mb-5 p-6">
             <h2 className="text-bold">
-              Our <span className="text-red-600 ">Achievements</span>
+              Our
+              <span className="text-red-600 dark:text-red-500 ml-5">
+                Achievements
+              </span>
             </h2>
           </div>
-          <div className="mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 dark:bg-gray-900 text-black dark:text-gray-200 text-lg">
+          <div className="mx-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 dark:bg-gray-800 dark:bg-opacity-0 text-black dark:text-gray-200 text-lg">
             <div className="pricing p-5 mb-5 md:mb-10 shadow-lg dark:bg-gray-800">
               <div className="text-center uppercase font-medium text-3xl py-2 mx-auto">
                 <h3>ROBOCON</h3>

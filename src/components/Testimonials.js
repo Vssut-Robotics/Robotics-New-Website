@@ -8,9 +8,9 @@ const Testimonial = () => {
   return (
     <div className="py-10 md:py-24 dark:bg-gray-900 container mx-auto flex flex-col md:flex-row shadow-sm overflow-hidden">
       <div className="relative w-full py-2 md:py-24 bg-blue-700 md:w-1/3 flex flex-col item-center justify-center">
-        <div className="absolute top-0 left-0 z-10 grid-indigo w-16 h-16 md:w-40 md:h-40 md:ml-20 md:pt-24"></div>
+        <div className="absolute top-0 left-0 z-3 grid-indigo w-16 h-16 md:w-40 md:h-40 md:ml-20 md:pt-24"></div>
 
-        <div className="relative text-2xl md:text-5xl py-2 px-6 md:py-6 md:px-1 md:w-64 md:mx-auto text-indigo-100 font-semibold leading-tight tracking-tight mb-0 z-20">
+        <div className="relative text-2xl md:text-5xl py-2 px-6 md:py-6 md:px-1 md:w-64 md:mx-auto text-indigo-100 font-semibold leading-tight tracking-tight mb-0 z-4">
           <span className="md:block">What</span>
           <span className="md-block">People Say</span>
           <span className="block">About Us!</span>
@@ -25,9 +25,6 @@ const Testimonial = () => {
           }}
           slidesPerView={1}
           centeredSlides="true"
-          scrollbar={{ draggable: true }}
-          onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
           navigation
           loop={true}
           pagination={{ clickable: true }}
@@ -41,7 +38,7 @@ const Testimonial = () => {
                       <img
                         alt={testimonial.name}
                         className="w-32 h-32 object-cover rounded-full border-2 border-indigo-500"
-                        src={`/images/testimonials/${testimonial.image}.jpg`}
+                        src={`/images/testimonials/${testimonial.image}.webp`}
                       />
                     </div>
 

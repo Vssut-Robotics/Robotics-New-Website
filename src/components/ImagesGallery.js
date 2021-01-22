@@ -1,17 +1,17 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   Pagination,
-  Navigation,
   Autoplay,
 } from "swiper";
 
 import "swiper/swiper.scss";
-SwiperCore.use([Pagination, Navigation, Autoplay]);
+import "swiper/components/pagination/pagination.scss";
+SwiperCore.use([Pagination, Autoplay]);
 const ImagesGallery = () => {
   return (
-    <div className="bg-white dark:bg-gray-900 font-poppins px-5 pb-20 md:px-10">
-      <div className="flex flex-row mb-10 justify-center text-gray-800 dark:text-white text-xl md:text-4xl uppercase font-semibold pt-16 md:pt-12">
-        <h2 className="px-2 py-2 md:py-5">GAllery</h2>
+    <div className="bg-white dark:bg-gray-900 font-poppins">
+      <div className=" flex flex-row justify-center text-center uppercase text-5xl mb-5 p-6">
+        <h2 className="text-bold dark:text-gray-200 pr-2">GALLERY</h2>
       </div>
 
       <Swiper
@@ -19,39 +19,34 @@ const ImagesGallery = () => {
           delay: 4000,
           disableOnInteraction: false,
         }}
+        centeredSlides={true}
         slidesPerView={1}
-        centeredSlides="true"
-        scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        navigation
         loop={true}
-        pagination={{ clickable: true }}
+        pagination={{ clickable: true, dynamicBullets: true }}
         breakpoints={{
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 4,
-          },
           1280: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween :'5'
           },
         }}
       >
         {[...Array(17)].map((_, index) => {
           return (
             <SwiperSlide>
-              <div
-                className="swiper-slide mx-4 rounded-xl hover:shadow-lg bg-white"
-                style={{
-                  minHeight: `400px`,
-                  backgroundPosition: `center`,
-                  backgroundSize: `cover`,
-                  backgroundImage: `url(${`../images/gallery/${
-                    index + 1
-                  }.jpg`})`,
-                }}
-              ></div>
+              <div className="p-2">
+                <div
+                  className="swiper-slide mx-auto lg:mx-10 mb-10 rounded-xl hover:shadow-lg bg-white"
+                  style={{
+                    width : `500px`,
+                    height: `333px`,
+                    backgroundPosition: `center`,
+                    backgroundSize: `cover`,
+                    backgroundImage: `url(${`../images/gallery/${
+                      index + 1
+                    }.webp`})`,
+                  }}
+                ></div>
+              </div>
             </SwiperSlide>
           );
         })}

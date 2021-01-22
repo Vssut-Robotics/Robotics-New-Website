@@ -2,20 +2,21 @@ import Navbar from "./components/Navbar";
 import About from "./components/AboutUs";
 import Footer from "./components/Footer";
 import TeamsSection from "./components/Teams";
-import Projects from "./components/Projects";
 import Achievements from "./components/Achievements";
 import Contact from "./components/ContactUs";
 import Testimonial from "./components/Testimonials";
 import MediaGallery from "./components/MediaCoverage";
 import ImagesGallery from "./components/ImagesGallery";
 import ScrollToTop from "./components/ScrollToTop";
-import AllProjects from "./pages/AllProjects";
-import Teams from "./pages/Teams";
-import { ThemeProvider } from "./components/themeContext";
+import Projects from "./components/Projects";
+import { ThemeProvider } from "./components/ThemeContext";
 import NotFound from "./pages/NotFound";
 import { Element } from "react-scroll";
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
+const AllProjects = React.lazy(() => import("./pages/AllProjects"));
+const Teams = React.lazy(() => import("./pages/Teams"));
 
 function App() {
   return (
@@ -23,16 +24,22 @@ function App() {
       <Router>
         <ScrollToTop />
         <div className="App">
-          <Navbar />
           <Switch>
             <Route exact path="/projects">
-              <AllProjects />
+              <Suspense fallback={<div>Loading...</div>}>
+                <AllProjects />
+              </Suspense>
             </Route>
             <Route exact path="/teams">
-              <Teams />
+              <Suspense fallback={<div>Loading...</div>}>
+                <Teams />
+              </Suspense>
             </Route>
             <Route exact path="/">
-              <Home />
+              <Navbar />
+              <Element id="home" name="home">
+                <Home />
+              </Element>
               <Element id="about" name="about">
                 <About />
               </Element>

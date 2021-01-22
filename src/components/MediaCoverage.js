@@ -1,15 +1,18 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { EffectCoverflow, Pagination, Navigation, Autoplay } from "swiper";
+import SwiperCore, { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 // Import Swiper styles
 import "swiper/swiper.scss";
-SwiperCore.use([EffectCoverflow, Pagination, Navigation, Autoplay]);
+SwiperCore.use([EffectCoverflow, Pagination, Autoplay]);
 const MediaGallery = () => {
   return (
-    <div class="bg-white dark:bg-gray-900 font-poppins px-5 md:px-10 pb-20">
-      <div class="flex flex-row mb-10 justify-center text-gray-800 dark:text-white text-xl md:text-4xl uppercase font-semibold pt-16 md:pt-12">
-        <h2 class="px-2 py-2 md:py-5">In The News</h2>
+    <div className="bg-white dark:bg-gray-900 font-poppins px-5 md:px-10 pt-10 pb-20">
+      <div className=" flex flex-row justify-center text-center uppercase text-4xl sm:text-5xl mb-5 p-6">
+        <h2 className="text-bold dark:text-gray-200 pr-2">
+         In The
+          <span className="text-red-600 ml-5">News</span>
+        </h2>
       </div>
 
       <Swiper
@@ -21,19 +24,15 @@ const MediaGallery = () => {
         }}
         slidesPerView={1}
         centeredSlides="true"
-        coverflowEffect={{ rotate: 20, stretch: 0, depth: 100, modifier: 1 }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        navigation
+        coverflowEffect={{ rotate: 10, stretch: 0, depth: 50, modifier: 1 }}
         loop={true}
         pagination={{ clickable: true }}
         breakpoints={{
           768: {
-            slidesPerView: 2,
-            spaceBetween: 4,
+            slidesPerView: 1,
           },
           1280: {
-            slidesPerView: 3,
+            slidesPerView: 2,
           },
         }}
       >
@@ -41,16 +40,15 @@ const MediaGallery = () => {
           return (
             <SwiperSlide>
               <div
-                class="swiper-slide mx-4 rounded-xl hover:shadow-lg bg-white"
+                className="swiper-slide mx-auto mb-10 rounded-xl hover:shadow-lg bg-white"
                 style={{
-                  width: `500px`,
-                  maxWidth: `700px`,
-                  minHeight: `380px`,
+                  width: `555px`,
+                  minHeight: `370px`,
                   backgroundPosition: `center`,
                   backgroundSize: `cover`,
                   backgroundImage: `url(${`../images/media/news${
                     index + 1
-                  }.png`})`,
+                  }.webp`})`,
                 }}
               ></div>
             </SwiperSlide>

@@ -1,21 +1,24 @@
-import { ThemeContext } from "./themeContext";
-import {useContext} from 'react'
+import { ThemeContext } from "./ThemeContext";
+import { useContext } from "react";
+import { HiMoon, HiSun } from "react-icons/hi";
+
 const Toggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  function isDark() {
-    return theme === "dark";
-  }
-
   return (
-    <label className="dark:text-white">
-      <input
-        type="checkbox"
-        checked={isDark()}
-        onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
-      ></input>
-      Dark Mode
-    </label>
+    <div className="transition border duration-500 ease-in-out dark:border-gray-500 rounded-full p-1">
+      {theme === "dark" ? (
+        <HiSun
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="text-gray-700 dark:text-yellow-300 text-2xl cursor-pointer"
+        />
+      ) : (
+        <HiMoon
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="text-gray-700 dark:text-yellow-300 text-2xl cursor-pointer"
+        />
+      )}
+    </div>
   );
 };
 
