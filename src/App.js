@@ -15,6 +15,7 @@ import { Element } from "react-scroll";
 import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
+import Registration from "./pages/Registration";
 const AllProjects = React.lazy(() => import("./pages/AllProjects"));
 const Teams = React.lazy(() => import("./pages/Teams"));
 
@@ -33,6 +34,11 @@ function App() {
             <Route exact path="/teams">
               <Suspense fallback={<div>Loading...</div>}>
                 <Teams />
+              </Suspense>
+            </Route>
+            <Route exact path="/register">
+              <Suspense fallback={<div>Loading...</div>}>
+                <Registration/>
               </Suspense>
             </Route>
             <Route exact path="/">

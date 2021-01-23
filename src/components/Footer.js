@@ -2,7 +2,7 @@ import footer from "../images/logos/footer.webp";
 const Footer = () => {
   return (
     <footer className="footer bg-gray-100 dark:bg-gray-700 pt-1 px-3 border-b-2 border-blue-700">
-      <div className=" flex flex-row w-full justify-between text-center uppercase text-l py-6">
+      <div className=" flex flex-row w-full justify-around text-center uppercase text-l py-6">
         <a
           target="_blank"
           rel="noreferrer"

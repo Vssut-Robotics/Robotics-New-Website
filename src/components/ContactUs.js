@@ -1,4 +1,35 @@
+import db from "../firebase";
+import {useState } from 'react'
 const Contact = () => {
+  const submitForm = (payload) => {
+    db.collection("contact").add({
+      name: payload.name,
+      email: payload.email,
+      contact: payload.contact,
+    }).then(()=> {
+      setFormState({
+        name: "",
+        email: "",
+        contact: "",
+      });
+    })
+  };
+      const handleChange = (event) => {
+        setFormState((prevState) => ({
+          ...prevState,
+          [event.target.id]: event.target.value,
+        }));
+      };
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        submitForm(formState);
+      };
+
+      const [formState, setFormState] = useState({
+        name: "",
+        email: "",
+        contact: "",
+      });
     return (
       <div className="relative flex items-top justify-center pb-20 bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
         <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 pt-10">
@@ -35,8 +66,9 @@ const Contact = () => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    Room No A-101, VSSUT Burla, Odisha 768018
+                  <div className="ml-4 text-md tracking-wide font-semibold w-60">
+                    Room no A-101, <br /> VSSUT ROBOTICS SOCIETY, <br />
+                    Burla, Sambalpur, Odisha, 768018
                   </div>
                 </div>
 
@@ -58,7 +90,7 @@ const Contact = () => {
                     />
                   </svg>
                   <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    +91 1234567890
+                    +91-87638-71658
                   </div>
                 </div>
 
@@ -80,12 +112,15 @@ const Contact = () => {
                     />
                   </svg>
                   <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                    vssutrobotics@gmail.com
+                    secretary.roboticsvssut@gmail.com
                   </div>
                 </div>
               </div>
 
-              <form className="p-6 flex flex-col justify-center">
+              <form
+                onSubmit={handleSubmit}
+                className="p-6 flex flex-col justify-center"
+              >
                 <div className="flex flex-col">
                   <label htmlFor="name" className="hidden">
                     Full Name
@@ -94,6 +129,7 @@ const Contact = () => {
                     type="name"
                     name="name"
                     id="name"
+                    onChange={handleChange}
                     placeholder="Full Name"
                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-300  font-semibold focus:border-indigo-500 focus:outline-none"
                   />
@@ -107,6 +143,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     id="email"
+                    onChange={handleChange}
                     placeholder="Email"
                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 dark:text-gray-300 font-semibold focus:border-indigo-500 focus:outline-none"
                   />
@@ -118,8 +155,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="tel"
-                    name="tel"
-                    id="tel"
+                    name="contact"
+                    id="contact"
+                    onChange={handleChange}
                     placeholder="Telephone Number"
                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700  text-gray-800 dark:text-gray-300 font-semibold focus:border-indigo-500 focus:outline-none"
                   />
@@ -127,6 +165,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
+                  onSubmit={handleSubmit}
                   className="md:w-32 bg-blue-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
                 >
                   Submit

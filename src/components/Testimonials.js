@@ -12,7 +12,7 @@ const Testimonial = () => {
 
         <div className="relative text-2xl md:text-5xl py-2 px-6 md:py-6 md:px-1 md:w-64 md:mx-auto text-indigo-100 font-semibold leading-tight tracking-tight mb-0 z-4">
           <span className="md:block">What</span>
-          <span className="md-block">People Say</span>
+          <span className="md-block ml-2 md:ml-0">People Say</span>
           <span className="block">About Us!</span>
         </div>
       </div>
@@ -55,7 +55,7 @@ const Testimonial = () => {
 
                       <div className="h-full relative z-10">
                         <div>
-                          <p className="text-gray-600 dark:text-gray-300 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl">
+                          <p className="text-gray-600 dark:text-gray-300 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-l md:text-2xl">
                             {testimonial.testimonial}
                           </p>
                         </div>

@@ -36,7 +36,7 @@ const MediaGallery = () => {
           },
         }}
       >
-        {[...Array(25)].map((_, index) => {
+        {[...Array(32)].map((_, index) => {
           return (
             <SwiperSlide>
               <div
@@ -46,7 +46,7 @@ const MediaGallery = () => {
                   minHeight: `370px`,
                   backgroundPosition: `center`,
                   backgroundSize: `cover`,
-                  backgroundImage: `url(${`../images/media/news${
+                  backgroundImage: `url(${`../images/media/news_${
                     index + 1
                   }.webp`})`,
                 }}

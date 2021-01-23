@@ -9,7 +9,7 @@ export const projects = [
   {
     projectId: 2,
     name: "ROUV",
-    image: "project_rov1.webp",
+    image: "project_rouv.webp",
     description:
       "Remote Operated Underwater Vehicle(ROUV) is a tethered underwater mobile device.It can reach a depth of 10 meters and has a runtime of 25 mins.It has auto-surfacing capability in case there is loss of connectivity.It can hold position against 12m/s turbulent flow,and has short range 3D environment mapping feature.It can also be used to detect cracks in the gates of dams.",
   },
@@ -23,9 +23,9 @@ export const projects = [
   {
     projectId: 4,
     name: "UVRAS",
-    image: "project_roboticarm.webp",
+    image: "project_uvras.webp",
     description:
-      "UltraViolet Radiation Sanitation Bot. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed est nisl, gravida vel diam quis, lobortis ornare enim. Nullam pharetra enim ullamcorper arcu consectetur ornare.",
+      "Ultra Violet Robot-Assisted Sanitizer '(UVRAS) is a bot with an omnidirectional motion emits UV rays for disinfection, the UV emitters used being safe for humans. With the feature of moving about in unmanned space & real-time video feed through an onboard camera, it is remotely controlled. The UV light targets pathogens and is effective for disinfecting the enclosed areas like hospital rooms, guest rooms, operation theatres, restaurants, and meeting spaces.",
   },
   {
     projectId: 5,

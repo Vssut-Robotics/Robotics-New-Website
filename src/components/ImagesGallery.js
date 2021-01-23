@@ -30,7 +30,7 @@ const ImagesGallery = () => {
           },
         }}
       >
-        {[...Array(17)].map((_, index) => {
+        {[...Array(19)].map((_, index) => {
           return (
             <SwiperSlide>
               <div className="p-2">
@@ -41,7 +41,7 @@ const ImagesGallery = () => {
                     height: `333px`,
                     backgroundPosition: `center`,
                     backgroundSize: `cover`,
-                    backgroundImage: `url(${`../images/gallery/${
+                    backgroundImage: `url(${`../images/gallery/gallery_${
                       index + 1
                     }.webp`})`,
                   }}

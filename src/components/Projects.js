@@ -27,7 +27,7 @@ const Projects = () => {
             <div
               className="bg-gray-300 dark:bg-gray-900 h-56 w-full rounded-lg shadow-md bg-cover bg-center"
               style={{
-                backgroundImage: `url(/images/projects/project_rov1.webp)`,
+                backgroundImage: `url(/images/projects/project_rouv.webp)`,
               }}
             ></div>
 
@@ -41,10 +41,10 @@ const Projects = () => {
               <div className="title-post font-bold">ROUV</div>
 
               <div className="summary-post text-base text-justify">
-                Remote Operated Underwater Vehicle is a tethered
-                underwater mobile device. It can reach a depth of 10 meters and
-                has a runtime of 25 mins. It has auto-surfacing capability in
-                case there is loss of connectivity.
+                Remote Operated Underwater Vehicle is a tethered underwater
+                mobile device. It can reach a depth of 10 meters and has a
+                runtime of 25 mins. It has auto-surfacing capability in case
+                there is loss of connectivity.
               </div>
             </div>
           </div>
@@ -81,7 +81,7 @@ const Projects = () => {
             <div
               className="bg-gray-300 dark:bg-gray-900 h-56 w-full rounded-lg shadow-md bg-cover bg-center"
               style={{
-                backgroundImage: `url(/images/projects/project_hoverpod.webp)`,
+                backgroundImage: `url(/images/projects/project_uvras.webp)`,
               }}
             ></div>
 
@@ -92,13 +92,12 @@ const Projects = () => {
                 </div>
                 <div className="category-title flex-1 text-sm">Ground</div>
               </div>
-              <div className="title-post font-bold">HOVERPOD</div>
+              <div className="title-post font-bold">UVRAS</div>
 
               <div className="summary-post text-base text-justify">
-                Hoverpod is a bot which could float and move in response to
-                mental commands.Hoverpod are capable of autonomous operation,
-                they are quiet, safe, durable, easy to operate, maintain and
-                transport
+                UVRAS with an omnidirectional motion emits UV rays for
+                disinfection. With the feature of moving about in unmanned space & real-time video
+                feed through an onboard camera, it is remotely controlled.
               </div>
             </div>
           </div>
