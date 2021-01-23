@@ -24,7 +24,12 @@ export default function Navbar() {
         onClick={handleMenu}
         className="menu dark:text-gray-300 text-gray-800 inline-flex p-3 hover:bg-blue-600 rounded lg:hidden ml-auto hover:text-white outline-none nav-toggler"
       >
-        <svg viewBox="0 0 100 80" width="20" height="20" className="fill-current">
+        <svg
+          viewBox="0 0 100 80"
+          width="20"
+          height="20"
+          className="fill-current"
+        >
           <rect width="100" height="20"></rect>
           <rect y="30" width="100" height="20"></rect>
           <rect y="60" width="100" height="20"></rect>
@@ -38,8 +43,7 @@ export default function Navbar() {
         id="navigation"
       >
         <div
-          onClick={handleMenu}
-          className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start dark:text-gray-300 flex flex-col lg:h-auto"
+          className="lg:inline-flex navbar lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start dark:text-gray-300 flex flex-col lg:h-auto"
         >
           <ScrollLink
             to="home"
@@ -47,7 +51,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>Home</span>
           </ScrollLink>
@@ -57,7 +61,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>About</span>
           </ScrollLink>
@@ -67,7 +71,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  items-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 rounded  items-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>Project</span>
           </ScrollLink>
@@ -77,7 +81,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex  navbar lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>Achievements</span>
           </ScrollLink>
@@ -87,7 +91,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>Team</span>
           </ScrollLink>
@@ -97,7 +101,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 roundeditems-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 roundeditems-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>Gallery</span>
           </ScrollLink>
@@ -107,7 +111,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>Contact Us</span>
           </ScrollLink>

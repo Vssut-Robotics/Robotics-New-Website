@@ -67,7 +67,7 @@ export const testimonials = [
     designation: "Former Secretary, 2019",
     image: "img_Amit",
     testimonial:
-      "The requirement and spark of technology and innovation can be seen transparently in this world. The herculastic need of robotics and it's application should be cheered as it is serving people. Improvising new minds and preparing them to serve mankind through robotics and technology this society has been volunteering it's time and efforts. I am glad that I got an opportunity to be a part of this club.",
+      "I feel immensely obliged and blessed enough to be acknowledged as the Secretary of the Robotics Society of VSSUT. It has always brushed up my skills in leadership, time management, and taught me to be willing to take risks. I appreciate every moment at this club that has helped me in being a better self with each passing second. It has been a wonderful experience working for this club. I would forever treasure these memories in my heart and cherish them for the rest of my life.",
   },
   {
     name: "Abhishek Agrawal",

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import db from "../firebase";
 
-const Registration = ({ options = ["first", "second", "third", "fourth"] }) => {
+const Registration = ({ options = ["disabled", "first", "second", "third", "fourth"] }) => {
     let history = useHistory();
   const submitForm = (payload, year) => {
     db.collection("registration")
@@ -23,7 +23,8 @@ const Registration = ({ options = ["first", "second", "third", "fourth"] }) => {
         }, 5000);
       });
   };
-  const [year, setYear] = useState(options[0].value);
+  const [year, setYear] = useState("default");
+  const [showAlert, setShowAlert] = useState(false);
   const handleChange = (event) => {
     setFormState((prevState) => ({
       ...prevState,
@@ -32,7 +33,12 @@ const Registration = ({ options = ["first", "second", "third", "fourth"] }) => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    submitForm(formState, year);
+    if(formState.firstName === "" || formState.email === ""|| formState.branch === "" ||formState.contact === "" ||formState.registrationNumber === "" ||formState.section === "" || year==="default" ){
+        setShowAlert(true)
+    }
+    else{
+      submitForm(formState, year);
+    }
   };
   const [showModal, setShowModal] = useState(false);
   const [formState, setFormState] = useState({
@@ -47,6 +53,28 @@ const Registration = ({ options = ["first", "second", "third", "fourth"] }) => {
 
   return (
     <>
+      <>
+        {showAlert ? (
+          <div
+            className={
+              "text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500"
+            }
+          >
+            <span className="text-xl inline-block mr-5 align-middle">
+              <i className="fas fa-bell" />
+            </span>
+            <span className="inline-block align-middle mr-8">
+              <b className="capitalize">Error!</b> Some fields are incomplete!
+            </span>
+            <button
+              className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
+              onClick={() => setShowAlert(false)}
+            >
+              <span>×</span>
+            </button>
+          </div>
+        ) : null}
+      </>
       <div class="min-w-screen min-h-screen bg-gray-200 flex items-center justify-center px-5 py-5">
         <div
           class="bg-gray-100 text-gray-500 rounded-3xl shadow-2xl w-full overflow-hidden"
@@ -387,6 +415,9 @@ const Registration = ({ options = ["first", "second", "third", "fourth"] }) => {
                       border-2 border-gray-200 outline-none
                       focus:border-indigo-500"
                     >
+                      <option value="default" disabled>
+                        -- Select Year --
+                      </option>
                       <option value="first">First Year</option>
                       <option value="second">Second Year</option>
                       <option value="third">Third Year</option>

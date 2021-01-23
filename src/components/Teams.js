@@ -84,7 +84,7 @@ const TeamsSection = () => {
             </div>
             <div className="p-2">
               <h3 className="text-center text-xl dark:text-gray-200 font-bold leading-8">
-                Mr.Bandan Kumar Bhoi
+                Dr. Bandan Kumar Bhoi
               </h3>
             </div>
             <div className="p-1">

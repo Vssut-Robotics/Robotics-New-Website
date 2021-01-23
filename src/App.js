@@ -38,7 +38,7 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Suspense fallback={<div>Loading...</div>}>
-                <Registration/>
+                <Registration />
               </Suspense>
             </Route>
             <Route exact path="/">

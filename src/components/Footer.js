@@ -48,7 +48,7 @@ const Footer = () => {
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://www.github.com/vssutrobotics"
+          href="https://github.com/Vssut-Robotics"
         >
           <svg
             className="w-7 h-7 fill-current dark:text-blue-200 text-blue-800 "
@@ -77,7 +77,7 @@ const Footer = () => {
           </svg>
         </a>
       </div>
-      <div className=" flex flex-row justify-center text-center uppercase text-l h-10">
+      <div className=" flex flex-row p-2 md:p-0 justify-center text-center uppercase text-l h-20">
         <img src={footer} alt="Footer Logo" />
       </div>
       <div className=" flex flex-row justify-center text-center uppercase text-l pb-6">
