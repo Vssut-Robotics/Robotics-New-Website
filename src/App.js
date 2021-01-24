@@ -16,6 +16,7 @@ import React, { Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Registration from "./pages/Registration";
+import FeedBack from "./pages/Feedback";
 const AllProjects = React.lazy(() => import("./pages/AllProjects"));
 const Teams = React.lazy(() => import("./pages/Teams"));
 
@@ -39,6 +40,11 @@ function App() {
             <Route exact path="/register">
               <Suspense fallback={<div>Loading...</div>}>
                 <Registration />
+              </Suspense>
+            </Route>
+            <Route exact path="/feedback">
+              <Suspense fallback={<div>Loading...</div>}>
+                <FeedBack/>
               </Suspense>
             </Route>
             <Route exact path="/">
