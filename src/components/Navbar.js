@@ -11,7 +11,7 @@ export default function Navbar() {
   return (
     <nav className="flex items-center dark:bg-gray-900 fixed bg-white z-10 p-3 flex-wrap shadow-md w-full">
       <div className="p-2 mr-4 inline-flex items-center">
-        <img src={logo} alt="Robotics Logo" />
+        <img src={logo} alt="Robotics Logo" className="h-auto w-auto" />
         <span className="text-xl ml-2 text-blue-600 font-bold uppercase tracking-wide">
           VSSUT
         </span>
@@ -42,9 +42,7 @@ export default function Navbar() {
         } top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         id="navigation"
       >
-        <div
-          className="lg:inline-flex navbar lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start dark:text-gray-300 flex flex-col lg:h-auto"
-        >
+        <div className="lg:inline-flex navbar lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start dark:text-gray-300 flex flex-col lg:h-auto">
           <ScrollLink
             to="home"
             spy={true}
@@ -101,7 +99,7 @@ export default function Navbar() {
             smooth={true}
             duration={500}
             offset={-80}
-            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 roundeditems-center justify-center hover:bg-blue-600 hover:text-white"
+            className="lg:inline-flex navbar lg:w-auto w-full px-3 py-2 rounded items-center justify-center hover:bg-blue-600 hover:text-white"
           >
             <span>Gallery</span>
           </ScrollLink>

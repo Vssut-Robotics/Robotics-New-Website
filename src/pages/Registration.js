@@ -5,12 +5,14 @@ import db from "../firebase";
 const Registration = ({ options = ["disabled", "first", "second", "third", "fourth"] }) => {
     let history = useHistory();
   const submitForm = (payload, year) => {
-    db.collection("registration")
+    setDisabledButton(true);
+    db.collection("robocamp")
       .add({
         firstName: payload.firstName,
         lastName: payload.lastName,
         email: payload.email,
         contact: payload.contact,
+        whatsapp : payload.whatsapp,
         branch: payload.branch,
         section: payload.section,
         registrationNumber: payload.registrationNumber,
@@ -18,6 +20,7 @@ const Registration = ({ options = ["disabled", "first", "second", "third", "four
       })
       .then(() => {
         setShowModal(true);
+        setDisabledButton(false);
         setTimeout(() => {
           history.push("/");
         }, 5000);
@@ -25,6 +28,7 @@ const Registration = ({ options = ["disabled", "first", "second", "third", "four
   };
   const [year, setYear] = useState("default");
   const [showAlert, setShowAlert] = useState(false);
+  const [disabledButton, setDisabledButton] = useState(false);
   const handleChange = (event) => {
     setFormState((prevState) => ({
       ...prevState,
@@ -46,6 +50,7 @@ const Registration = ({ options = ["disabled", "first", "second", "third", "four
     lastName: "",
     email: "",
     contact: "",
+    whatsapp : "",
     branch: "",
     section: "",
     registrationNumber: "",
@@ -292,7 +297,7 @@ const Registration = ({ options = ["disabled", "first", "second", "third", "four
             >
               <div class="flex flex-row justify-center gap-2 pb-2">
                 <div class="text-2xl md:text-3xl text-red-600 font-bold">
-                  INTROBOTICS
+                  ROBOCAMP
                 </div>
                 <div class="font-bold text-2xl md:text-3xl text-indigo-900">
                   REGISTRATION
@@ -348,6 +353,22 @@ const Registration = ({ options = ["disabled", "first", "second", "third", "four
                     <input
                       type="number"
                       id="contact"
+                      maxlength="10"
+                      onChange={handleChange}
+                      class="w-full -ml-10 pl-2 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="flex -mx-3">
+                <div class="w-full px-3 mb-5">
+                  <label class="text-xs font-semibold px-1">Whatsapp Number</label>
+                  <div class="flex">
+                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"></div>
+                    <input
+                      type="number"
+                      id="whatsapp"
                       maxlength="10"
                       onChange={handleChange}
                       class="w-full -ml-10 pl-2 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
@@ -430,6 +451,7 @@ const Registration = ({ options = ["disabled", "first", "second", "third", "four
                 <div class="w-full px-3 mb-5">
                   <button
                     onClick={handleSubmit}
+                    disabled={disabledButton}
                     class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
                   >
                     REGISTER NOW
@@ -466,9 +488,8 @@ const Registration = ({ options = ["disabled", "first", "second", "third", "four
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-gray-600 text-lg leading-relaxed">
-                    Hope You are excited for Introbotics - Roboics Society
-                    Orientation 2021. <br />
-                    See you there on 24th January 2021 6PM
+                    Hope You are excited for RoboCamp <br />
+                    See you 2nd May 2021 for the introductory session.
                   </p>
                 </div>
                 {/*footer*/}

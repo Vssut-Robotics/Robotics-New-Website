@@ -4,7 +4,7 @@ export const projects = [
     name: "3D PRINTER",
     image: "project_3Dprinter.webp",
     description:
-      "3D printing, also known as additive manufacturing (AM), refers to processes used to create a three-dimensional object in which layers of material are formed under computer control to create an object.Objects can be of almost any shape or geometry and are produced using digital model data from a 3D model or another electronic data source such as an Additive Manufacturing File (AMF) file. Thus, unlike material removed from a stock in the conventional machining process, 3D",
+      "3D printing, also known as additive manufacturing (AM), refers to processes used to create a three-dimensional object in which layers of material are formed under computer control to create an object.Objects can be of almost any shape or geometry and are produced using digital model data from a 3D model or another electronic data source such as an Additive Manufacturing File (AMF) file. Thus, unlike material removed from a stock in the conventional machining process.",
   },
   {
     projectId: 2,
