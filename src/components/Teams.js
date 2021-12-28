@@ -104,13 +104,13 @@ const TeamsSection = () => {
             <div>
               <img
                 className="w-32 h-32 border-4 border-red-400 dark:border-red-700 p-2 rounded-full mx-auto"
-                src="/images/administration/admin_abhisek.webp"
-                alt="Abhishek Agrawal"
+                src="/images/administration/admin_akash.webp"
+                alt="Akash Pattanayk"
               />
             </div>
             <div className="p-2 xs:h-20 md:auto">
               <h3 className="text-center text-xl dark:text-gray-200 font-bold leading-8">
-                Abhishek Agrawal
+                Akash Pattanyak
               </h3>
             </div>
             <div className="p-1">
