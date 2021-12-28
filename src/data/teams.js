@@ -1035,7 +1035,7 @@ export const teams = [
     linkedin: "https://www.linkedin.com/in/nitindra-kumar-sahoo-b41406203",
     twitter: null,
     instagram: null,
-    image: "2024_nitindra",
+    image: "2024_nitin",
   },
   {
     email: "omparmar1906@gmail.com",
@@ -1232,7 +1232,7 @@ export const teams = [
     linkedin: "https://www.linkedin.com/in/sandeep-kumar-patra-46028b21b",
     twitter: null,
     instagram: "https://www.instagram.com/sandeepkumarkitu/",
-    image: "2924_sandeep",
+    image: "2024_sandeep",
   },
   {
     email: "sangramrengoku619@gmail.com",
@@ -1345,7 +1345,7 @@ export const teams = [
     linkedin: "https://www.linkedin.com/in/smruti-ranjan-rout-aa90b91b8",
     twitter: null,
     instagram: null,
-    image: "2024_smruti",
+    image: "2024_smruti_rout",
   },
   {
     email: "snehaas2407@gmail.com",
