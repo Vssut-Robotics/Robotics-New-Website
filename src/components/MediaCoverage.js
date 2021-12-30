@@ -47,7 +47,7 @@ const MediaGallery = () => {
                   backgroundPosition: `center`,
                   backgroundSize: `cover`,
                   backgroundImage: `url(${`../images/media/news_${
-                    index + 2
+                    index + 3
                   }.webp`})`,
                 }}
               ></div>
