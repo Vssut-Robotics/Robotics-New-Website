@@ -1,5 +1,11 @@
 export const projects = [
   {
+    projectId: 0,
+    name: "ELECTRIC CYCLE",
+    image: "project_e-cycle.webp",
+    description: "An E-cycle is a recent project, developed by VSSUT Students. It has various features-Rechargeable battery which gets charged in 2 hours, attains ana impressive maximum speed of 20 kmph with payload of 65kg, running with a decent mileage of 20-25km in one charge. It's never a questions of battery draining, as it charges while paddling."
+  },
+  {
     projectId: 1,
     name: "3D PRINTER",
     image: "project_3Dprinter.webp",
@@ -175,10 +181,5 @@ export const projects = [
     description:
       "A solar tracker is a device that orients a payload towards the sun,Payload can be oriented in 2 axis.Payloads are usually solar panels,parabolic troughs,fresnel reflectors ,lenses or the mirrors of thea heliostat.",
   },
-  {
-    projectId: 26,
-    name: "ELECTRIC CYCLE",
-    image: "project_e-cycle.webp",
-    description: "An E-cycle is a recent project, developed by VSSUT Students. It has various features-Rechargeable battery which gets charged in 2 hours, attains ana impressive maximum speed of 20 kmph with payload of 65kg, running with a decent mileage of 20-25km in one charge. It's never a questions of battery draining, as it charges while paddling."
-  },
+  
 ];
